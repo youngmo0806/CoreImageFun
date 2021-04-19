@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreImageFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XUZ-lt-T2n">
+                                <rect key="frame" x="87" y="44" width="240" height="150"/>
+                                <color key="backgroundColor" red="1" green="0.8945741653" blue="0.15778627989999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="MaC-vc-KUj"/>
+                                    <constraint firstAttribute="width" secondItem="XUZ-lt-T2n" secondAttribute="height" multiplier="8:5" id="Tfk-vt-vFe"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="life.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dno-xi-EHU">
+                                <rect key="frame" x="87" y="299" width="240" height="150"/>
+                                <color key="backgroundColor" red="1" green="0.3414133191" blue="0.012575217519999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="DSg-ao-n1H"/>
+                                    <constraint firstAttribute="width" constant="240" id="Nhx-xw-3KW"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NuE-Qc-qFz">
+                                <rect key="frame" x="30" y="614" width="342" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="338" id="IaZ-Kq-3fs"/>
+                                    <constraint firstAttribute="height" constant="29" id="hOG-9w-DNs"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="amountSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="UF2-lE-lMG"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NuE-Qc-qFz" secondAttribute="trailing" constant="44" id="9da-Qt-NvY"/>
+                            <constraint firstItem="Dno-xi-EHU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="WfP-9W-yJF"/>
+                            <constraint firstItem="XUZ-lt-T2n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XAC-31-IU8"/>
+                            <constraint firstItem="Dno-xi-EHU" firstAttribute="top" secondItem="XUZ-lt-T2n" secondAttribute="bottom" constant="105" id="bTN-Tj-gat"/>
+                            <constraint firstItem="NuE-Qc-qFz" firstAttribute="top" secondItem="Dno-xi-EHU" secondAttribute="bottom" constant="165" id="hJN-Ww-fyy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NuE-Qc-qFz" secondAttribute="bottom" constant="219" id="hVD-bk-5Nt"/>
+                            <constraint firstItem="XUZ-lt-T2n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jZ5-uG-36o"/>
+                            <constraint firstItem="NuE-Qc-qFz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="pUE-yR-gdv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageOriginal" destination="Dno-xi-EHU" id="US4-Hg-wqa"/>
+                        <outlet property="imageView" destination="XUZ-lt-T2n" id="bw8-vs-oPd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-462.31884057971018" y="119.86607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="life.png" width="394" height="417"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
