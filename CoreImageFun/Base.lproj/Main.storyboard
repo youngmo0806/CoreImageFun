@@ -42,21 +42,44 @@
                                     <action selector="amountSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="UF2-lE-lMG"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOr-ip-jiq">
+                                <rect key="frame" x="157" y="712" width="100" height="50"/>
+                                <state key="normal" title="사진앨범"/>
+                                <connections>
+                                    <action selector="loadPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wIn-Zw-6YJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hB-Bc-ciU">
+                                <rect key="frame" x="157" y="770" width="100" height="50"/>
+                                <state key="normal" title="사진앨범저장"/>
+                                <connections>
+                                    <action selector="savePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s8r-eT-KVf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1hB-Bc-ciU" secondAttribute="trailing" constant="157" id="1qx-9N-cH6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GOr-ip-jiq" secondAttribute="bottom" constant="100" id="3X4-WY-d5G"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NuE-Qc-qFz" secondAttribute="trailing" constant="44" id="9da-Qt-NvY"/>
+                            <constraint firstItem="GOr-ip-jiq" firstAttribute="top" secondItem="NuE-Qc-qFz" secondAttribute="bottom" constant="69" id="Cyw-s0-Z9Z"/>
                             <constraint firstItem="Dno-xi-EHU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="WfP-9W-yJF"/>
                             <constraint firstItem="XUZ-lt-T2n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XAC-31-IU8"/>
                             <constraint firstItem="Dno-xi-EHU" firstAttribute="top" secondItem="XUZ-lt-T2n" secondAttribute="bottom" constant="105" id="bTN-Tj-gat"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GOr-ip-jiq" secondAttribute="trailing" constant="157" id="gMn-rZ-n5k"/>
+                            <constraint firstItem="GOr-ip-jiq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="h1U-8k-Bse"/>
                             <constraint firstItem="NuE-Qc-qFz" firstAttribute="top" secondItem="Dno-xi-EHU" secondAttribute="bottom" constant="165" id="hJN-Ww-fyy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NuE-Qc-qFz" secondAttribute="bottom" constant="219" id="hVD-bk-5Nt"/>
+                            <constraint firstItem="1hB-Bc-ciU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="i9A-yw-2j7"/>
                             <constraint firstItem="XUZ-lt-T2n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jZ5-uG-36o"/>
                             <constraint firstItem="NuE-Qc-qFz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="pUE-yR-gdv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1hB-Bc-ciU" secondAttribute="bottom" constant="42" id="umS-tP-SxN"/>
+                            <constraint firstItem="1hB-Bc-ciU" firstAttribute="top" secondItem="GOr-ip-jiq" secondAttribute="bottom" constant="8" symbolic="YES" id="xKN-2N-uZh"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="amountSilder" destination="NuE-Qc-qFz" id="AuO-gZ-tIk"/>
                         <outlet property="imageOriginal" destination="Dno-xi-EHU" id="US4-Hg-wqa"/>
                         <outlet property="imageView" destination="XUZ-lt-T2n" id="bw8-vs-oPd"/>
                     </connections>
